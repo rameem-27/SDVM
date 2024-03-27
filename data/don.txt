@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PrintLetterBarcodeData uid="538244722299" name="Don Thampy" gender="M" yob="2002" co="S/O: Thampy V V" house="Valamkottu" street="Pezhakkappilly" lm="Ilahiya College" loc="Pezhakkappilly" vtc="Mulavoor" po="Pezhakkappilly" dist="Ernakulam" subdist="Muvattupuzha" state="Kerala" pc="686673"/>

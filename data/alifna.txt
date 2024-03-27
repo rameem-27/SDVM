@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PrintLetterBarcodeData uid="992039529347" name="Alifna Fathima M N" gender="F" yob="2002" gname="NASEER" house="MARIYIL" street="VAZHAPPILLY" lm="MUDAVOOR P O" loc="MUVATTUPUZHA" vtc="Velloorkunnam (part)" po="Mudavoor" dist="Ernakulam" state="Kerala" pc="686669"/>

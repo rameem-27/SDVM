@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PrintLetterBarcodeData uid="235865975515" name="PIBIN P BINOY" gender="M" yob="2001" gname="BINOY PETER P G" house="PARATHUVAYILIL" street="KEEZHILLAM" lm="KEEZHILLAM" vtc="Rayamangalam" po="Keezhillam" dist="Ernakulam" state="Kerala" pc="683541"/>

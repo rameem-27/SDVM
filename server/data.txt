@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?> <PrintLetterBarcodeData uid="902303297567" name="Muhammed Rameem M A" gender="M" yob="2002" co="S/O Abdul Azeez M A" house="Mundackal House" street="." lm="." loc="Mudickal" vtc="Perumbavoor (Part)" po="Mudikkal" dist="Ernakulam" subdist="Kunnathunad" state="Kerala" pc="683547" dob="19/10/2002"/>
