@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Grid</title>
+    <style>
+        .container {
+            margin: 0 auto; /* Center the container horizontally */
+            padding: 0 100px; /* Adjust this value to set equal padding from left and right */
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            margin: 20px;
+            float: left;
+            text-align: center;
+            line-height: 150px;
+            font-size: 18px;
+            border-radius: 10px;
+            padding: 20px;
+            background-size: cover; /* Ensure image covers entire box */
+        }
+        .box.button {
+            width: 188px; /* Adjust width as needed */
+            height: 188px; /* Adjust height as needed */
+            font-size: 24px; /* Increase font size */
+            padding: 20px 40px; /* Increase padding to increase button size */
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Increase length of third box */
+        .third-box {
+            width: 300px; /* Adjust the width as needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="box" style="background-image: url('{{ box1_image }}');"></div>
+            <div class="box" style="background-image: url('{{ box2_image }}');"></div>
+            <div class="box third-box">{{ box3_text }}</div>
+            <button class="box button" id="voteButton1">vote</button>
+        </div>
+        <div class="row">
+            <div class="box" style="background-image: url('{{ box5_image }}');"></div>
+            <div class="box" style="background-image: url('{{ box6_image }}');"></div>
+            <div class="box third-box">{{ box7_text }}</div> 
+            <button class="box button" id="voteButton2">vote</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("voteButton1").addEventListener("click", function() {
+            var box3Text = document.querySelector('.row:nth-child(1) .third-box').innerText;
+    
+            fetch('/asd', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ result: box3Text })
+            }).then(function(response) {
+                window.location.href = 'http://127.0.0.1:8080/redirect';
+            }).catch(function(error) {
+                console.error('Error:', error);
+            });
+        });
+    
+        document.getElementById("voteButton2").addEventListener("click", function() {
+            var box7Text = document.querySelector('.row:nth-child(2) .third-box').innerText;
+    
+            fetch('/asd', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ result: box7Text })
+            }).then(function(response) {
+                window.location.href = 'http://127.0.0.1:5000/';
+            }).catch(function(error) {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+
+</body>
+</html>

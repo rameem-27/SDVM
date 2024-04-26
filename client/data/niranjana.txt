@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PrintLetterBarcodeData uid="727619189000" name="Niranjana S Nair" gender="F" yob="2002" co="D/O: Sunil Gopinath K" house="Konamparambath" street="Pattimattom" loc="Pattimattom P O" vtc="Pattimattom" dist="Ernakulam" state="Kerala" pc="683562"/>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12 Digit Search</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+  }
+  .container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-out;
+    margin: 20px auto;
+    max-width: 400px;
+  }
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #66afe9;
+  }
+  input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  input[type="button"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 40px; /* 20px from the bottom */
+    left: 40px; /* 20px from the left */
+  }
+  input[type="button"]:hover {
+    background-color: #d32f2f;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .error-message {
+    color: #ff0000;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    animation: fadeOut 2s ease-in forwards;
+    opacity: 1;
+  }
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Search for a 12-Digit Number</h2>
+  
+    <form id="searchForm" action="/home" method="POST" onsubmit="return validateForm()">
+      <input type="text" id="searchInput" name="searchInput" placeholder="xxxx-xxxx-xxxx" required>
+      <input type="hidden" id="cleanedInput" name="cleanedInput">
+      <input type="submit" value="Search">
+    </form>
+</div>
+
+<input type="button" value="Logout" onclick="logout()"> 
+
+  <script>
+    function validateForm() {
+      var searchInput = document.getElementById("searchInput");
+      var inputValue = searchInput.value;
+      var cleanedInput = inputValue.replace(/-/g, '');
+      if (/^\d{12}$/.test(cleanedInput)) {
+        return true;
+      } else {
+        var errorMessage = document.createElement('div');
+        errorMessage.textContent = "ID number should contain 12-digits";
+        errorMessage.classList.add('error-message');
+        document.body.appendChild(errorMessage);
+        setTimeout(function() {
+          errorMessage.remove();
+        }, 2000);
+        
+        searchInput.value = ""; 
+        return false;
+      }
+    }
+    
+  function logout() {
+    window.location.href = "/dashboard";
+  }
+</script>
+
+  
+
+</body>
+</html>
+

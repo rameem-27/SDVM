@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PrintLetterBarcodeData uid="402864162474" name="Safna Jaleel" gender="F" yob="2001" co="D/O: Jaleel C B" house="Cherodath House" street="Thottumugham P o" lm="Kuttamassery" loc="Aluva" vtc="Aluva" po="Thottumughom" dist="Ernakulam" subdist="Aluva" state="Kerala" pc="683105" dob="26/03/2001"/>
+

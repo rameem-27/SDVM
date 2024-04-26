@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Execute Python Script</title>
+</head>
+<body>
+
+    <form id="dataForm" action="http://127.0.0.1:8080/verification" method="post">
+        <input type="hidden" id="dataInput" name="data" value="{{ data }}">
+        <input type="submit" value="Submit Data">
+    </form>
+    
+    <script>
+        document.getElementById('dataForm').submit();
+    </script>
+</body>
+</html>

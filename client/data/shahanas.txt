@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PrintLetterBarcodeData uid="566311436830" name="FATHIMA SHAHANAS" gender="F" yob="2002" gname="MUHAMMAD C A" house="CHOLAKUNDIL" street="KALIYAR" lm="KALIYAR" vtc="Vannapuram" po="Kaliyar" dist="Idukki" state="Kerala" pc="685582" dob="15/02/2002"/>

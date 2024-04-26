@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Two Boxes with Names as Links</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .box {
+        width: 300px;
+        height: 250px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .details {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .details p {
+        margin: 10px 0;
+    }
+
+    .name a {
+        text-decoration: none;
+        color: #333;
+        font-size: 20px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    .name a:hover {
+        color: #007bff;
+    }
+
+    .party {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .percentage {
+        display: inline-block;
+        font-size: 16px;
+        color: #888;
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <div class="details">
+        <p><span class="party">{{C1party1}}</span><span class="percentage">{{C1percentage1}}</span></p>
+        <p><span class="party">{{C1party2}}</span><span class="percentage">{{C1percentage2}}</span></p>
+    </div>
+    <p class="name"><a href="#">CONSTITUTION_A</a></p>
+</div>
+
+<div class="box">
+    <div class="details">
+        <p><span class="party">{{C2party1}}</span><span class="percentage">{{C2percentage1}}</span></p>
+        <p><span class="party">{{C2party2}}</span><span class="percentage">{{C2percentage2}}</span></p>
+    </div>
+    <p class="name"><a href="#">CONSTITUTION_B</a></p>
+</div>
+
+</body>
+</html>
