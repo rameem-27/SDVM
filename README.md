@@ -2,6 +2,10 @@ SMART DIGITAL VOTING MACHINE
 It is an entirely new voting procedure with sophisticated method of vote casting with
 automatic ID verificaion along withbiometric authentication.
 
+This method doesnot require any manual verification throughout the voting.
+
+So it can significantly reduce the man power
+
 It enable the voters to cast their vote from any polling booth across the country.
 #Uses Flask app as web server.
 #Uses Raspberry pi as the voting machine
@@ -17,3 +21,8 @@ Voting Procedure
 8) If fingerprint verification is successfull the server queries for the candidate details in the respective voters constitution.
 9) The voter can cast their vote through the touch display.
 10) The result will be updated live.
+
+
+In addition to that also create a website to view the results live.
+
+Also a portal for the election officer to update the voter list
